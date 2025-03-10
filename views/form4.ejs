@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Inscripción de Alumnos</title>
+</head>
+<body>
+    <h1>Nuevo evento</h1>
+    <form action="/eventon" method="POST">
+        <label for="nombre_evento">Nombre:</label>
+        <input type="text" id="nombre_evento" name="nombre_evento" required>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        <label for="ubicacion">Ubicación:</label>
+        <input type="text" id="ubicacion" name="ubicacion" required>
+        <label for="organizador">organizador</label>
+        <input type="textp" id="organizador" name="organizador" required>
+        <button type="submit">Añadir evento</button>
+    </form>
+    <% if (evento) { %>
+        <h1>¡Se ha añadido un nuevo evento!</h1>
+    <p>Nombre: <%= evento.nombre_evento %></p>
+    <p>Fecha <%= evento.fecha %></p>
+    <p>Carrera: <%= evento.ubicacion %></p>
+    <p>Año de Ingreso: <%= evento.organizador %></p>
+    <% } %>
+    <ul>
+        <li>
+            <a href="/">Alumnos</a>
+        </li>
+        <li>
+            <a href="/profc">eventos</a>
+        </li>
+        <li>
+            <a href="/cursoc">cursos</a>
+        </li>
+        <li>
+        <a href="/libroc">Libros</a>
+        </li>
+    </ul>
+</body>
+</html>
