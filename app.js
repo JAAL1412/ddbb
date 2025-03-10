@@ -117,6 +117,57 @@ app.post('/libron', (req, res) => {
         });
 });
 
+//Listas-----------------------------------------------------------------------------------------------------
+app.get('/alumnol', (req, res) => {
+    res.render('lista',{ alumno: null });
+});
+app.get('/profl', (req, res) => {
+    res.render('lista2',{ profe: null });
+});
+app.get('/cursol', (req, res) => {
+    res.render('lista3',{curso:null});
+});
+app.get('/eventol', (req, res) => {
+    res.render('lista4',{evento:null});
+});
+app.get('/librol', (req, res) => {
+    res.render('lista5',{libro:null});
+});
+
+//Edicion------------------------------------------------------------------------------------------------
+app.get('/alumnoe', (req, res) => {
+    res.render('edit',{ alumno: null });
+});
+app.get('/profe', (req, res) => {
+    res.render('edit2',{ profe: null });
+});
+app.get('/cursoe', (req, res) => {
+    res.render('edit3',{curso:null});
+});
+app.get('/eventoe', (req, res) => {
+    res.render('edit4',{evento:null});
+});
+app.get('/libroe', (req, res) => {
+    res.render('edit5',{libro:null});
+});
+
+//Eliminadion----------------------------------------------------------------------------------------------
+app.get('/alumnod', (req, res) => {
+    res.render('dele',{ alumno: null });
+});
+app.get('/profd', (req, res) => {
+    res.render('dele2',{ profe: null });
+});
+app.get('/cursod', (req, res) => {
+    res.render('dele3',{curso:null});
+});
+app.get('/eventod', (req, res) => {
+    res.render('dele4',{evento:null});
+});
+app.get('/librod', (req, res) => {
+    res.render('dele5',{libro:null});
+});
+
 // Servidor
 const PORT = 3000;
 app.listen(PORT, () => {

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Lista de Alumnos</title>
+</head>
+
+   <body>
+        <h1>Lista de Registros</h1>
+        <% alumno.forEach(registro => { %>
+        <ul>
+            
+                <li>Nomre:<%= alumno.nombre %></li>
+                <li><%= alumno. %></li> 
+                <li>Edad: <%= alumno.edad %></li>
+                <li>Carrera: <%= alumno.carrera %></li>
+                <li>Año de ingreso: <%= alumno.año_ingreso %></li>
+                <a href="/alumnoe/<%= alumno._id %>">Editar</a>
+        </ul>
+        <% }); %>
+    </body>
+   </html>
